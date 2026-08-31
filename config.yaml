@@ -1,0 +1,83 @@
+deadline_hours: 48
+reminder_hours_before: 6
+
+texts:
+  welcome: |
+    Добро пожаловать. Чтобы писать в чате, заполните анкету в личных сообщениях бота.
+    На это есть {hours} часов. Не успеете — будете исключены из группы.
+  start_prompt: |
+    Заполните анкету. Отвечайте по одному вопросу.
+    Необязательные поля можно пропустить.
+  reminder_dm: |
+    Напоминание: до исключения из группы осталось менее {hours} часов.
+    Завершите анкету, чтобы получить доступ к чату.
+  reminder_group: |
+    Напоминание: до исключения осталось менее {hours} часов. Заполните анкету в ЛС бота.
+  anketa_done: |
+    Анкета сохранена. Доступ к чату открыт.
+  skip_button: Пропустить
+  start_button: Начать
+
+questions:
+  - id: name
+    prompt: Как тебя зовут?
+    type: text
+    required: false
+    skippable: true
+    max_length: 40
+  - id: rank
+    prompt: Какой у тебя максимальный ранг?
+    type: buttons
+    required: true
+    skippable: false
+    columns: 3
+    options:
+      - Железо 1
+      - Железо 2
+      - Железо 3
+      - Бронза 1
+      - Бронза 2
+      - Бронза 3
+      - Серебро 1
+      - Серебро 2
+      - Серебро 3
+      - Золото 1
+      - Золото 2
+      - Золото 3
+      - Платина 1
+      - Платина 2
+      - Платина 3
+      - Алмаз 1
+      - Алмаз 2
+      - Алмаз 3
+      - Восход 1
+      - Восход 2
+      - Восход 3
+      - Бессмертный 1
+      - Бессмертный 2
+      - Бессмертный 3
+      - Радиант
+  - id: age
+    prompt: Сколько тебе лет?
+    type: text
+    required: false
+    skippable: true
+    max_length: 3
+  - id: valorant_nick
+    prompt: Ник и тег в валоранте (пример name#tag)?
+    type: text
+    required: true
+    skippable: false
+    max_length: 40
+  - id: playtime
+    prompt: Сколько играешь в валорант в целом?
+    type: text
+    required: false
+    skippable: true
+    max_length: 100
+  - id: about
+    prompt: Напиши что-нибудь о себе :D
+    type: text
+    required: false
+    skippable: true
+    max_length: 500
